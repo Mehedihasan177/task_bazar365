@@ -22,6 +22,7 @@ void updateSummation() {
    final List<Map<String, dynamic>> tasks = await DBHelper().queryAllRows();
    print(tasks);
    taskList.assignAll(tasks.map((data) => Task.fromMap(data)).toList());
+   update(['getTask']);
   }
 
   addTask(Task task, BuildContext context)async{
